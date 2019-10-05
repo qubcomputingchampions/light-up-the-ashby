@@ -11,14 +11,15 @@ public class Tetromino {
     private double xAcceleration, yAcceleration;
     private final double gravity = 1.0;
 
-    public Tetromino(Shape shape, Orientation orientation, double x, double y, double xAcceleration, double yAcceleration) {
+    public Tetromino(Shape shape) {
         this.shape = shape;
-        this.orientation = orientation;
+        // Set default options
+        this.orientation = Orientation.NORTH;
         this.color = originalColor();
-        this.x = x;
-        this.y = y;
-        this.xAcceleration = xAcceleration;
-        this.yAcceleration = yAcceleration;
+        this.x = 0;
+        this.y = 0;
+        this.xAcceleration = 1;
+        this.yAcceleration = 1;
     }
 
     private String originalColor() {
