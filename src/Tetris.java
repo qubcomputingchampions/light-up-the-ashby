@@ -6,6 +6,7 @@ public class Tetris {
         // Initialise the display
         if (args.length == 0) {
             System.out.printf("Initialising default display");
+            var display = new Display()
         }
         else {
             // TODO: interface with physical display
